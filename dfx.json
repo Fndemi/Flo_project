@@ -1,0 +1,30 @@
+{
+  "canisters": {
+    "Flo_project_backend": {
+      "candid": "src/Flo_project_backend/Flo_project_backend.did",
+      "package": "Flo_project_backend",
+      "type": "rust"
+    },
+    "Flo_project_frontend": {
+      "dependencies": [
+        "Flo_project_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/Flo_project_frontend/src/index.html"
+      },
+      "source": [
+        "src/Flo_project_frontend/assets",
+        "dist/Flo_project_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}

@@ -1,3 +1,17 @@
+type Test= record{
+    over_all:nat8;
+    subject:text;
+    curve:nat8;
+}
+
+
+
+
+
+
 service : {
-    "greet": (text) -> (text) query;
+    "get_test": (nat64) -> (opt Test) query;
+    "get_percentage":(nat64) ->(opt nat64) query;
+    "insert_test":(nat64,Test) ->(opt Test);
+    "insert_percentage":(nat64,nat64) ->(opt nat64);
 }
